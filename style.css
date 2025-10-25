@@ -1,100 +1,160 @@
-/* Reset default */
+/* === STYLE.CSS untuk TK MUTIARA HARAPAN === */
+
+/* 🌸 Reset dan font umum */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* 🌈 Background lembut profesional */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff8f0;
-    color: #333;
-    line-height: 1.6;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  color: #333;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #ffdfd3;
+/* 🌸 Header atas */
+header#header {
+  background: #004b8d;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid #007bff;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #ff6f61;
+header#header .logo {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
-nav {
-    background-color: #ff6f61;
+header#header .icons a {
+  color: white;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 10px 0;
+header#header .icons a:hover {
+  color: #ffd54f;
 }
 
-nav ul li {
-    margin: 0 15px;
+/* 🌺 Banner (Welcome section) */
+#banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: url('../images/bg-school.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 80px 40px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
+#banner .content {
+  max-width: 600px;
 }
 
-nav ul li a:hover {
-    color: #ffe0d6;
+#banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
+#banner p {
+  font-size: 1.1rem;
+}
+
+/* 🌼 Button */
+.button {
+  background: #ffb300;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #ffa000;
+}
+
+/* 🏫 Section umum */
 section {
-    padding: 40px 20px;
+  padding: 60px 10%;
+  background-color: #ffffffb0;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-.gallery {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+section h2 {
+  color: #004b8d;
+  margin-bottom: 15px;
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
 }
 
-.gallery img {
-    width: 200px;
-    border-radius: 10px;
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-form {
-    display: flex;
+.features article {
+  background: #f9f9ff;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.features article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* 🖼️ Galeri */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.posts img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 📞 Kontak */
+#contact ul {
+  list-style: none;
+}
+
+#contact li {
+  margin-bottom: 10px;
+}
+
+/* 📱 Responsif */
+@media (max-width: 768px) {
+  #banner {
     flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    margin: auto;
-}
-
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px;
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff8a75;
-}
-
-footer {
     text-align: center;
-    padding: 20px;
-    background-color: #ffdfd3;
+  }
+
+  #banner .image {
     margin-top: 20px;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
 }
